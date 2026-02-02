@@ -1,0 +1,13 @@
+{
+  "$schema": "https://railway.com/config.schema.json",
+  "build": {
+    "builder": "NIXPACKS",
+    "rootDirectory": "/frontend",
+    "buildCommand": "npm run build"
+  },
+  "deploy": {
+    "startCommand": "npx serve -s build -l $PORT",
+    "restartPolicyType": "ON_FAILURE",
+    "healthcheckPath": "/"
+  }
+}
